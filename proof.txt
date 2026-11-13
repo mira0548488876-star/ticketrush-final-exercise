@@ -1,0 +1,77 @@
+### git worktree list
+C:/Users/User/ticketrush              c7d49cd [main]
+C:/Users/User/ticketrush-early-access de58922 [feature/early-access]
+C:/Users/User/ticketrush-hotfix-price c1c857e [hotfix/price]
+C:/Users/User/ticketrush-review-noa   bbb046f [review/noa-refund]
+C:/Users/User/ticketrush-security     7d863ec [security/remove-api-key]
+C:/Users/User/ticketrush-waitlist     1416a39 [feature/waitlist]
+
+### git branch -a -vv
++ feature/early-access                                  de58922 (C:/Users/User/ticketrush-early-access) merge: include student promotion in early access
++ feature/waitlist                                      1416a39 (C:/Users/User/ticketrush-waitlist) feat: add email waitlist helper
++ hotfix/price                                          c1c857e (C:/Users/User/ticketrush-hotfix-price) Revert "perf: faster price formatting"
+* main                                                  c7d49cd [origin/main: ahead 13] Merge branch 'security/remove-api-key'
++ review/noa-refund                                     bbb046f (C:/Users/User/ticketrush-review-noa) [origin/noa/refund: ahead 1] review: document refund service fee bug
++ security/remove-api-key                               7d863ec (C:/Users/User/ticketrush-security) security: stop tracking local payment credentials
+  remotes/origin/HEAD                                   -> origin/main
+  remotes/origin/dana/promo                             ec7a3fe test: add student discount tests
+  remotes/origin/main                                   6e5b25d feat: friendlier message for empty quantity
+  remotes/origin/mira-kossovsky/feature/early-access    de58922 merge: include student promotion in early access
+  remotes/origin/mira-kossovsky/feature/waitlist        1416a39 feat: add email waitlist helper
+  remotes/origin/mira-kossovsky/hotfix/price            c1c857e Revert "perf: faster price formatting"
+  remotes/origin/mira-kossovsky/main                    c7d49cd Merge branch 'security/remove-api-key'
+  remotes/origin/mira-kossovsky/result                  176cb8c result mira-kossovsky 100/100
+  remotes/origin/mira-kossovsky/review/noa-refund       bbb046f review: document refund service fee bug
+  remotes/origin/mira-kossovsky/security/remove-api-key 7d863ec security: stop tracking local payment credentials
+  remotes/origin/noa/refund                             f7e8785 test: refund tests
+  remotes/origin/ruth/fixes                             fee9f58 wip: try new fonts
+
+### git log --graph --oneline --all -n 80
+* 176cb8c (origin/mira-kossovsky/result) result mira-kossovsky 100/100
+*   c7d49cd (HEAD -> main, tag: v1.1, origin/mira-kossovsky/main) Merge branch 'security/remove-api-key'
+|\  
+| * 7d863ec (origin/mira-kossovsky/security/remove-api-key, security/remove-api-key) security: stop tracking local payment credentials
+* |   19b69ed Merge branch 'feature/waitlist'
+|\ \  
+| * | 1416a39 (origin/mira-kossovsky/feature/waitlist, feature/waitlist) feat: add email waitlist helper
+| |/  
+* |   ba6100a Merge branch 'feature/early-access'
+|\ \  
+| * \   de58922 (origin/mira-kossovsky/feature/early-access, feature/early-access) merge: include student promotion in early access
+| |\ \  
+| | * | ec7a3fe (origin/dana/promo) test: add student discount tests
+| | * | 48ae458 feat: student discount (15%)
+| * | |   01040b4 Merge branch 'main' into feature/early-access
+| |\ \ \  
+| | | |/  
+| | |/|   
+| * | | b2304bf feat: raise member ticket limit to six
+| * | | 611cb25 feat: add early access member pricing
+| | |/  
+| |/|   
+* | | 39d41bc fix: correct concert date in events.js
+| |/  
+|/|   
+* | c1c857e (origin/mira-kossovsky/hotfix/price, hotfix/price) Revert "perf: faster price formatting"
+|/  
+| * bbb046f (origin/mira-kossovsky/review/noa-refund, review/noa-refund) review: document refund service fee bug
+| * f7e8785 (origin/noa/refund) test: refund tests
+| * 61bfedd feat: refund calculation for cancelled orders
+|/  
+| * fee9f58 (origin/ruth/fixes) wip: try new fonts
+| * 72063d7 debug: dump state to console
+| * 20cd6a9 WIP: try removing ticket limits
+| * 8284d98 fix: correct concert date in events.js
+| * 339324e WIP: new checkout flow (do not merge)
+|/  
+* 6e5b25d (origin/main, origin/HEAD) feat: friendlier message for empty quantity
+* 9119fe2 fix: typo in hero heading
+* a61f4ad feat: add footer with links
+* 73924c4 perf: faster price formatting
+* 03bd4dd docs: update artist lineup text
+* c44fbf8 feat: add early-access promo banner
+* 62f48b5 (tag: v1.0) feat: purchase page UI
+* f4c58bc feat: payment provider config
+* 2cc7e97 feat: event details data
+* 8a944f6 feat: ticket price calculation with tests
+* ed1b1e9 Initial commit: project skeleton and exercise tooling
